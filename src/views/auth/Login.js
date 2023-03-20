@@ -1,7 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import { setGetLocalStorageItem } from "utils/LocalStorage";
 
 export default function Login() {
+  const history = useHistory();
+
   return (
     <>
       <div className="container mx-auto px-4 h-full">
@@ -89,6 +92,10 @@ export default function Login() {
                     <button
                       className="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
                       type="button"
+                      onClick={() => {
+                        setGetLocalStorageItem();
+                        history.push("../admin/dashboard");
+                      }}
                     >
                       Sign In
                     </button>

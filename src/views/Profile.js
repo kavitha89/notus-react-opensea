@@ -6,7 +6,7 @@ import Footer from "components/Footers/Footer.js";
 export default function Profile() {
   return (
     <>
-      <Navbar transparent />
+      {/* <Navbar transparent /> */}
       <main className="profile-page">
         <section className="relative block h-500-px">
           <div
